@@ -4,8 +4,18 @@
 \alias{updateStopping.regression}
 \title{updateStopping.regression function}
 \usage{
-\method{updateStopping}{regression}(dat, parms, net, truth, testoutput,
-  count, monitor, mx, curcost, ...)
+\method{updateStopping}{regression}(
+  dat,
+  parms,
+  net,
+  truth,
+  testoutput,
+  count,
+  monitor,
+  mx,
+  curcost,
+  ...
+)
 }
 \arguments{
 \item{dat}{data object}

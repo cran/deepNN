@@ -23,7 +23,7 @@ then this can be included in the objective.
 }
 \examples{
 
-\dontrun{
+\donttest{
 netwts <- train(dat=train_set,
                 truth=truth,
                 net=net,

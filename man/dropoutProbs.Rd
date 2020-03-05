@@ -19,7 +19,7 @@ A function to specify dropout for a neural network.
 }
 \examples{
 
-\dontrun{
+\donttest{
 
 netwts <- train( dat=d,
                  truth=truth,

@@ -4,10 +4,20 @@
 \alias{train}
 \title{train function}
 \usage{
-train(dat, truth, net, loss = Qloss(), tol = 0.95, eps = 0.001,
-  batchsize = NULL, dropout = dropoutProbs(), parinit = function(n) {
-      return(runif(n, -0.01, 0.01)) }, monitor = TRUE,
-  stopping = "default", update = "classification")
+train(
+  dat,
+  truth,
+  net,
+  loss = Qloss(),
+  tol = 0.95,
+  eps = 0.001,
+  batchsize = NULL,
+  dropout = dropoutProbs(),
+  parinit = function(n) {     return(runif(n, -0.01, 0.01)) },
+  monitor = TRUE,
+  stopping = "default",
+  update = "classification"
+)
 }
 \arguments{
 \item{dat}{the input data, a list of vectors}

@@ -29,6 +29,25 @@ stopping.default <- function(cost,curcost,count,tol,...){
     return(curcost<tol)
 }
 
+
+##' stopping.revdir function
+##'
+##' A function to halt computation when curcost > tol
+##'
+##' @method stopping revdir
+##' @param cost the value of the loss function passed in
+##' @param curcost current measure of cost, can be different to the parameter 'cost' above e.g. may consider smoothed cost over the last k iterations
+##' @param count iteration count
+##' @param tol tolerance, or limit
+##' @param ... additional arguments
+##' @seealso \link{stopping.maxit}
+##' @return ...
+
+stopping.revdir <- function(cost,curcost,count,tol,...){
+    return(curcost>tol)
+}
+
+
 ##' stopping.maxit function
 ##'
 ##' A function to halt computation when the number of iterations reaches a given threshold, tol
@@ -143,38 +162,62 @@ updateStopping.classification <- function(dat,parms,net,truth,testoutput,count,m
 
 updateStopping.regression <- function(dat,parms,net,truth,testoutput,count,monitor,mx,curcost,...){
 
-    stop("UNDER DEVELOPMENT")
+    #stop("UNDER DEVELOPMENT")
 
-    tstidx <- sample(1:length(dat),1)
+    tstidx <- sample(1:length(dat),100)
     w <- weights2list(parms[1:nnetpar(net)],net$dims)
     b <- bias2list(parms[(nnetpar(net)+1):length(parms)],net$dims)
-    cls <- net$forward_pass(dat[[tstidx]],
-                            weights=w,
-                            bias=b,
-                            dims=net$dims,
-                            nlayers=net$nlayers,
-                            activ=net$activ,
-                            back=TRUE,
-                            regulariser=net$regulariser)
+
+    fitfun <- function(idx){
+        fit <- net$forward_pass(dat[[idx]],
+                                weights=w,
+                                bias=b,
+                                dims=net$dims,
+                                nlayers=net$nlayers,
+                                activ=net$activ,
+                                back=TRUE,
+                                regulariser=net$regulariser)$output
+
+        #SStot <- sum((truth[[idx]]-mean(truth[[idx]]))^2)
+        #SSres <- sum((truth[[idx]]-fit)^2)
+        #rsquared <- 1 - SSres / SStot
+        #return(rsquared)
+
+        RSS <- sum((truth[[idx]]-fit)^2)
+
+        return(RSS)
+
+    }
+
+    Rsquared <- mean(sapply(tstidx,fitfun))
+
+    #browser()
 
 
-    TST <- mean((truth[[tstidx]]-cls$output)^2)
-    testoutput <- c(testoutput,TST)
+    testoutput <- c(testoutput,Rsquared)
 
     if(count>20){
         curcost <- mean(testoutput[(count-20):count])
     }
 
     if(monitor){
+
+
         if(count<200){
-            plot(testoutput,type="l",ylim=c(0,1),main="Monitor")
+            MAXX <- max(testoutput)
+            plot(testoutput,type="l",ylim=c(0,MAXX),main="Monitor - MSE",xlab="Iteration",ylab="MSE")
         }
         else{
-            plot(testoutput[(count-199):count],type="l",ylim=c(0,1),sub="Monitor",main=c(count,mx))
+            plot(testoutput[(count-199):count],type="l",ylim=c(0,MAXX),sub="Monitor - MSE",main=c(count,mx),xlab="Iteration",ylab="MSE")
+        }
+
+        if(any(count==c(200,2000,2500,3500,5000,10000))){
+            dev.set(dev.cur())
+            dev.print(pdf,file=paste("trace_1_",count,"pdf",sep=""))
         }
     }
 
-    if(curcost>mx){
+    if(curcost<mx){
         mx <- curcost
     }
 

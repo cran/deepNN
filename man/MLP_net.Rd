@@ -4,8 +4,7 @@
 \alias{MLP_net}
 \title{MLP_net function}
 \usage{
-MLP_net(input, weights, bias, dims, nlayers, activ, back = TRUE,
-  regulariser)
+MLP_net(input, weights, bias, dims, nlayers, activ, back = TRUE, regulariser)
 }
 \arguments{
 \item{input}{input data, a list of vectors (i.e. ragged array)}

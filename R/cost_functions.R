@@ -16,7 +16,7 @@
 ##'
 ##' # Example in context:
 ##'
-##' \dontrun{
+##' \donttest{
 ##' netwts <- train(dat=train_set,
 ##'                 truth=truth,
 ##'                 net=net,
@@ -54,7 +54,7 @@ Qloss <- function(){
 ##'
 ##' # Example in context:
 ##'
-##' \dontrun{
+##' \donttest{
 ##' netwts <- train(dat=train_set,
 ##'                 truth=truth,
 ##'                 net=net,
@@ -89,7 +89,7 @@ wQloss <- function(w){
 ##' }
 ##' @examples
 ##'
-##' \dontrun{
+##' \donttest{
 ##' netwts <- train(dat=train_set,
 ##'                 truth=truth,
 ##'                 net=net,
@@ -130,7 +130,7 @@ multinomial <- function(){
 ##' }
 ##' @examples
 ##'
-##' \dontrun{
+##' \donttest{
 ##' netwts <- train(dat=train_set,
 ##'                 truth=truth,
 ##'                 net=net,
@@ -148,3 +148,13 @@ wmultinomial <- function(w,batchsize){
     retlist$grad_loss <- function(truth,output){return(-(truth+(w-1)/batchsize)/output)}
     return(retlist)
 }
+
+
+
+
+# R2 <- function(){
+#     retlist <- list()
+#     retlist$loss <- function(truth,output){return(sum((truth-output)^2) / sum((truth-mean(truth))^2)-1)} # minimise negative R2
+#     retlist$grad_loss <- function(truth,output){return(-2*(truth-output) / sum((truth-mean(truth))^2))} #negatives cancel
+#     return(retlist)
+# }

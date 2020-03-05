@@ -19,7 +19,7 @@
 ##' }
 ##' @examples
 ##'
-##' \dontrun{
+##' \donttest{
 ##'
 ##' netwts <- train( dat=d,
 ##'                  truth=truth,

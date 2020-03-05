@@ -4,8 +4,18 @@
 \alias{updateStopping.classification}
 \title{updateStopping.classification function}
 \usage{
-\method{updateStopping}{classification}(dat, parms, net, truth, testoutput,
-  count, monitor, mx, curcost, ...)
+\method{updateStopping}{classification}(
+  dat,
+  parms,
+  net,
+  truth,
+  testoutput,
+  count,
+  monitor,
+  mx,
+  curcost,
+  ...
+)
 }
 \arguments{
 \item{dat}{data object}

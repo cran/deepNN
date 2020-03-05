@@ -32,6 +32,10 @@ deepNN: Deep Learning. Benjamin M. Taylor
 }
 
 references{
+Thanks go to the following references for helping to inspire and develop the package: Ian Goodfellow, Yoshua Bengio, Aaron Courville, Francis Bach
+(2016, ISBN:978-0262035613) Deep Learning. Terrence J. Sejnowski (2018, ISBN:978-0262038034) The Deep Learning Revolution. Grant Sanderson
+(3brown1blue) <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> Neural Networks YouTube playlist. Michael A. Nielsen
+<http://neuralnetworksanddeeplearning.com/> Neural Networks and Deep Learning
 \enumerate{
     \item Ian Goodfellow, Yoshua Bengio, Aaron Courville, Francis Bach. Deep Learning. (2016)
     \item Terrence J. Sejnowski. The Deep Learning Revolution (The MIT Press). (2018)

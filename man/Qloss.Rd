@@ -16,7 +16,7 @@ A function to evaluate the quadratic loss function and the derivative of this fu
 
 # Example in context:
 
-\dontrun{
+\donttest{
 netwts <- train(dat=train_set,
                 truth=truth,
                 net=net,

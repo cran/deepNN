@@ -258,7 +258,13 @@ train <- function(dat,truth,net,loss=Qloss(),tol=0.95,eps=0.001,batchsize=NULL,d
     }
 
     cost <- NULL
-    curcost <- 0
+    if(update=="classification"){
+        curcost <- 0
+    }
+    else if(update=="regression"){
+        curcost <- Inf
+    }
+
     parms <- parinit(npar) #runif(npar,-0.01,0.01) #rep(0,npar) #rnorm(npar,0,0.1)
     del <- Inf
     count <- 1
@@ -273,6 +279,8 @@ train <- function(dat,truth,net,loss=Qloss(),tol=0.95,eps=0.001,batchsize=NULL,d
 
     while(STOPPING(cost,curcost,count,tol)){
         wtest <- wrap(parms,dat=dat,truth=truth,net=net,loss=loss,batchsize=batchsize,dropout=dropout)
+
+        #browser()
 
         if(monitor){
             par(mfrow=c(2,2))

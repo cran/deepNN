@@ -19,7 +19,7 @@ A function to evaluate the weighted quadratic loss function and the derivative o
 
 # Example in context:
 
-\dontrun{
+\donttest{
 netwts <- train(dat=train_set,
                 truth=truth,
                 net=net,

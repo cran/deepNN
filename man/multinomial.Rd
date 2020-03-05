@@ -14,7 +14,7 @@ A function to evaluate the multinomial loss function and the derivative of this 
 }
 \examples{
 
-\dontrun{
+\donttest{
 netwts <- train(dat=train_set,
                 truth=truth,
                 net=net,
