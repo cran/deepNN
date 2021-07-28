@@ -287,12 +287,18 @@ addList <- function(x,y){
 ##' }
 ##' @examples
 ##'
-##' \donttest{
-##' download_mnist("mnist.RData")
-##' }
+##' # Don't run at R check because the file is large (23Mb)
+##' # download_mnist("mnist.RData")
+##'
 ##'
 ##' @export
 
 download_mnist <- function(fn){
-    download.file("https://www.lancaster.ac.uk/staff/taylorb1/mnist.RData",fn)
+    # download.file("https://www.lancaster.ac.uk/staff/taylorb1/mnist.RData",fn) # :-(
+    tryCatch(
+      download.file("https://github.com/bentaylor1/mnist/blob/main/mnist.RData?raw=true",fn),
+      error = "There is a problem accessing https://github.com/bentaylor1/mnist/blob/main/mnist.RData, please try again later or download it manually.",
+      warning = "There is a problem accessing https://github.com/bentaylor1/mnist/blob/main/mnist.RData, please try again later or download it manually."
+    )
+
 }

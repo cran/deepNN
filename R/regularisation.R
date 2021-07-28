@@ -11,16 +11,16 @@
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' # Example in context: NOTE with the network function
-##' # no_regularisation() is the default, so this argument
-##' # actually need not be included
-##'
-##' net <- network( dims = c(784,16,16,10),
-##'                 regulariser = no_regularisation(),
-##'                 activ=list(ReLU(),logistic(),softmax()))
-##'
+## @examples
+##
+## # Example in context: NOTE with the network function
+## # no_regularisation() is the default, so this argument
+## # actually need not be included
+##
+## net <- network( dims = c(784,16,16,10),
+##                 regulariser = no_regularisation(),
+##                 activ=list(ReLU(),logistic(),softmax()))
+##
 ##' @export
 
 no_regularisation <- function(){
@@ -44,15 +44,15 @@ no_regularisation <- function(){
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' # Example in context: NOTE the value of 1 used here is arbitrary,
-##' # to get this to work well, you'll have to experiment.
-##'
-##' net <- network( dims = c(784,16,16,10),
-##'                 regulariser = L1_regularisation(1),
-##'                 activ=list(ReLU(),logistic(),softmax()))
-##'
+## @examples
+##
+## # Example in context: NOTE the value of 1 used here is arbitrary,
+## # to get this to work well, you'll have to experiment.
+##
+## net <- network( dims = c(784,16,16,10),
+##                 regulariser = L1_regularisation(1),
+##                 activ=list(ReLU(),logistic(),softmax()))
+##
 ##' @export
 
 L1_regularisation <- function(alpha){
@@ -79,15 +79,15 @@ L1_regularisation <- function(alpha){
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' # Example in context: NOTE the value of 1 used here is arbitrary,
-##' # to get this to work well, you'll have to experiment.
-##'
-##' net <- network( dims = c(784,16,16,10),
-##'                 regulariser = L2_regularisation(1),
-##'                 activ=list(ReLU(),logistic(),softmax()))
-##'
+## @examples
+##
+## # Example in context: NOTE the value of 1 used here is arbitrary,
+## # to get this to work well, you'll have to experiment.
+##
+## net <- network( dims = c(784,16,16,10),
+##                 regulariser = L2_regularisation(1),
+##                 activ=list(ReLU(),logistic(),softmax()))
+##
 ##' @export
 
 L2_regularisation <- function(alpha){

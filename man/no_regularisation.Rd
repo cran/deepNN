@@ -12,17 +12,6 @@ list containing functions to evaluate the cost modifier and grandient modifier
 \description{
 A function to return the no regularisation strategy for a network object.
 }
-\examples{
-
-# Example in context: NOTE with the network function
-# no_regularisation() is the default, so this argument
-# actually need not be included
-
-net <- network( dims = c(784,16,16,10),
-                regulariser = no_regularisation(),
-                activ=list(ReLU(),logistic(),softmax()))
-
-}
 \references{
 \enumerate{
     \item Ian Goodfellow, Yoshua Bengio, Aaron Courville, Francis Bach. Deep Learning. (2016)

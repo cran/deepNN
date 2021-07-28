@@ -5,7 +5,9 @@
 \alias{deepNN-package}
 \alias{deepNN}
 \title{deepNN}
-\format{An object of class \code{logical} of length 1.}
+\format{
+An object of class \code{logical} of length 1.
+}
 \usage{
 deepNN
 }

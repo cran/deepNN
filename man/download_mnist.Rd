@@ -17,9 +17,9 @@ A function to download mnist data in .RData format. File includes objects train_
 }
 \examples{
 
-\donttest{
-download_mnist("mnist.RData")
-}
+# Don't run at R check because the file is large (23Mb)
+# download_mnist("mnist.RData")
+
 
 }
 \references{

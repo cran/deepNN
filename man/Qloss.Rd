@@ -12,21 +12,6 @@ a list object with elements that are functions, evaluating the loss and the deri
 \description{
 A function to evaluate the quadratic loss function and the derivative of this function to be used when training a neural network.
 }
-\examples{
-
-# Example in context:
-
-\donttest{
-netwts <- train(dat=train_set,
-                truth=truth,
-                net=net,
-                eps=0.001,
-                tol=0.95,
-                loss=Qloss(), # note Qloss is actually the default
-                batchsize=100)
-}
-
-}
 \references{
 \enumerate{
     \item Ian Goodfellow, Yoshua Bengio, Aaron Courville, Francis Bach. Deep Learning. (2016)

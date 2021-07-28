@@ -12,19 +12,19 @@
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' # Example in context:
-##'
-##' \donttest{
-##' netwts <- train(dat=train_set,
-##'                 truth=truth,
-##'                 net=net,
-##'                 eps=0.001,
-##'                 tol=0.95,
-##'                 loss=Qloss(), # note Qloss is actually the default
-##'                 batchsize=100)
-##' }
+## @examples
+##
+## # Example in context:
+##
+## \donttest{
+## netwts <- train(dat=train_set,
+##                 truth=truth,
+##                 net=net,
+##                 eps=0.001,
+##                 tol=0.95,
+##                 loss=Qloss(), # note Qloss is actually the default
+##                 batchsize=100)
+## }
 ##'
 ##' @export
 
@@ -50,19 +50,19 @@ Qloss <- function(){
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' # Example in context:
-##'
-##' \donttest{
-##' netwts <- train(dat=train_set,
-##'                 truth=truth,
-##'                 net=net,
-##'                 eps=0.001,
-##'                 tol=0.95,
-##'                 loss=wQloss(c(10,5,6,9)), # here assuming output of length 4
-##'                 batchsize=100)
-##' }
+## @examples
+##
+## # Example in context:
+##
+## \donttest{
+## netwts <- train(dat=train_set,
+##                 truth=truth,
+##                 net=net,
+##                 eps=0.001,
+##                 tol=0.95,
+##                 loss=wQloss(c(10,5,6,9)), # here assuming output of length 4
+##                 batchsize=100)
+## }
 ##'
 ##' @export
 
@@ -87,17 +87,17 @@ wQloss <- function(w){
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' \donttest{
-##' netwts <- train(dat=train_set,
-##'                 truth=truth,
-##'                 net=net,
-##'                 eps=0.001,
-##'                 tol=0.95,
-##'                 loss=multinomial(),
-##'                 batchsize=100)
-##' }
+## @examples
+##
+## \donttest{
+## netwts <- train(dat=train_set,
+##                 truth=truth,
+##                 net=net,
+##                 eps=0.001,
+##                 tol=0.95,
+##                 loss=multinomial(),
+##                 batchsize=100)
+## }
 ##'
 ##' @export
 
@@ -128,18 +128,18 @@ multinomial <- function(){
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' \donttest{
-##' netwts <- train(dat=train_set,
-##'                 truth=truth,
-##'                 net=net,
-##'                 eps=0.001,
-##'                 tol=0.95,
-##'                 loss=wmultinomial(c(10,5,6,9)), # here assuming output of length 4
-##'                 batchsize=100)
-##' }
-##'
+## @examples
+##
+## \donttest{
+## netwts <- train(dat=train_set,
+##                 truth=truth,
+##                 net=net,
+##                 eps=0.001,
+##                 tol=0.95,
+##                 loss=wmultinomial(c(10,5,6,9)), # here assuming output of length 4
+##                 batchsize=100)
+## }
+##
 ##' @export
 
 wmultinomial <- function(w,batchsize){

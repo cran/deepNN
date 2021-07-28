@@ -17,21 +17,6 @@ returns these probabilities in an appropriate format for interaction with the ne
 \description{
 A function to specify dropout for a neural network.
 }
-\examples{
-
-\donttest{
-
-netwts <- train( dat=d,
-                 truth=truth,
-                 net=net,
-                 eps=0.01,
-                 tol=0.95,           # run for 100 iterations
-                 batchsize=10,       # note this is not enough
-                 loss=multinomial(), # for convergence
-                 dropout=dropoutProbs(input=0.8,hidden=0.5))
-}
-
-}
 \references{
 \enumerate{
     \item Ian Goodfellow, Yoshua Bengio, Aaron Courville, Francis Bach. Deep Learning. (2016)

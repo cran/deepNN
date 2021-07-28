@@ -17,20 +17,20 @@
 ##'     \item Neural Networks YouTube playlist by 3brown1blue: \url{https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi}
 ##'     \item{http://neuralnetworksanddeeplearning.com/}
 ##' }
-##' @examples
-##'
-##' \donttest{
-##'
-##' netwts <- train( dat=d,
-##'                  truth=truth,
-##'                  net=net,
-##'                  eps=0.01,
-##'                  tol=0.95,           # run for 100 iterations
-##'                  batchsize=10,       # note this is not enough
-##'                  loss=multinomial(), # for convergence
-##'                  dropout=dropoutProbs(input=0.8,hidden=0.5))
-##' }
-##'
+## @examples
+##
+## \donttest{
+##
+## netwts <- train( dat=d,
+##                  truth=truth,
+##                  net=net,
+##                  eps=0.01,
+##                  tol=0.95,           # run for 100 iterations
+##                  batchsize=10,       # note this is not enough
+##                  loss=multinomial(), # for convergence
+##                  dropout=dropoutProbs(input=0.8,hidden=0.5))
+## }
+##
 ##' @export
 
 dropoutProbs <- function(input=1,hidden=1){
