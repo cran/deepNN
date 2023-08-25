@@ -1,10 +1,10 @@
-8b995a2847e5a18e07581f31318941d1 *DESCRIPTION
+8ded5c2b671faee0a595d583eef3c573 *DESCRIPTION
 a3bad99c6a88a044682d3cf4cd9b9dc1 *NAMESPACE
 a45f32a90342cc7c9d7c91b84bb27173 *R/MLP.R
 cd5300795be136070c551779fbae9bb3 *R/activations.R
 d41d8cd98f00b204e9800998ecf8427e *R/convolution.R
 2ce6f2be9abebbd8b0bac97876a6ea89 *R/cost_functions.R
-f47382877b713e9f381a5d8a5f865048 *R/deepNN.R
+abdbf8b49b496798266ebe71328ebcdf *R/deepNN.R
 f0d2966b7a169bdac05fe788a7ae2c1d *R/grad_test.R
 e5c21ecdad8c353bc6be9dfc0c011ab2 *R/miscellaneous.R
 e04e97dae735ca60e93537b1fa436abd *R/networks.R
@@ -26,7 +26,7 @@ f494b723c84a248c88df8642f18dee23 *man/backprop_evaluate.Rd
 e6a200f7a2462837ad9e63ab66b21ce8 *man/backpropagation_MLP.Rd
 e127bd638bd70eb84dc6182d8e1eccd5 *man/bias2list.Rd
 c55660aed92d78f321ded0b611dbcaf0 *man/biasInit.Rd
-22397cec440cfb3cd51e2c8d387a09e3 *man/deepNN-package.Rd
+a6240371e026e9315ae33fc1224946eb *man/deepNN-package.Rd
 142f28627f58efd003af040e48da89ae *man/download_mnist.Rd
 24aa122b1c69ddcfeb061990f700ed94 *man/dropoutProbs.Rd
 1a90c06f116ee54ad115256d920a7b8f *man/gradInit.Rd
@@ -45,7 +45,7 @@ b3f835dec2c2c7e2a6393c9cf4f3475a *man/no_regularisation.Rd
 a5a2a18af57a054ffb4f685d821730bc *man/stopping.default.Rd
 41615763dfa4c660639606e668c0ce94 *man/stopping.maxit.Rd
 1f1c41523a14189cd8e258473cc4c22f *man/stopping.revdir.Rd
-4d265c4f1a712c9570469a8a096e282f *man/train.Rd
+78db53a532f9bc32501c90ab3543f174 *man/train.Rd
 d08fe291cb9c679ad39f8f4e18ff2b12 *man/updateStopping.Rd
 f9d5752c269f6de36921e9aec4e406e7 *man/updateStopping.classification.Rd
 028352032d71461b84b9021b384d08b6 *man/updateStopping.regression.Rd

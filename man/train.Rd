@@ -13,7 +13,9 @@ train(
   eps = 0.001,
   batchsize = NULL,
   dropout = dropoutProbs(),
-  parinit = function(n) {     return(runif(n, -0.01, 0.01)) },
+  parinit = function(n) {
+     return(runif(n, -0.01, 0.01))
+ },
   monitor = TRUE,
   stopping = "default",
   update = "classification"

@@ -2,12 +2,6 @@
 ##'
 ##' Teaching resources (yet to be added) and implementation of some Deep Learning methods. Includes multilayer perceptron, different activation functions, regularisation strategies, stochastic gradient descent and dropout.
 ##'
-##' \tabular{ll}{
-##' Package: \tab deepNN\cr
-##' Version: \tab 0.1\cr
-##' Date: \tab 2019-01-11\cr
-##' License: \tab GPL-3 \cr
-##' }
 ##'
 ##'
 ##'
